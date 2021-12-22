@@ -1,0 +1,3 @@
+(executable
+ (name mash)
+ (libraries mash_attacks notty.unix rpi.base-rpi3 rpi rpi.ws2812b))
