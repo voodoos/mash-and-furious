@@ -1,0 +1,6 @@
+pin-depends: [
+  [
+    "rpi.0.0.1"
+    "git+https://github.com/well-typed-lightbulbs/rpi.git#bt"
+  ]
+]
