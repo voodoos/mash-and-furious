@@ -1,11 +1,4 @@
 (library
  (name mash_attacks)
  (modules_without_implementation game)
- (libraries
-  utils
-  notty
-  notty.unix
-  rpi.hardware-unix
-  rpi.base-rpi3
-  rpi
-  rpi.ws2812b))
+ (libraries utils notty notty.unix))

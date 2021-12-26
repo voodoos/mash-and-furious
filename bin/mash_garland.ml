@@ -32,6 +32,8 @@ let to_0_5 x =
   let x = float x in
   Float.(round (5. *. x /. 255.) |> to_int)
 
+let to_ws Utils.{ r; g; b } = Ws2812b.{ r; g; b }
+
 let games : (module Game.S) list = [ (module Mash_and_furious.Game) ]
 
 let () =
@@ -57,7 +59,7 @@ let () =
       let state = Game.update ~offset ~dt:offset state in
       let colors = Game.render state in
 
-      Ws2812b.output (Ws2812b.encode colors);
+      Ws2812b.output (Ws2812b.encode (List.map to_ws colors));
 
       last_time := offset;
       loop state

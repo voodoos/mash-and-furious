@@ -11,7 +11,7 @@ module Make (Input : Input.S) = struct
 
   let make input = { id = next_id (); input; last_press = 0L; bps = 0. }
 
-  let us_in_a_s = Int64.to_float Rpi.Mtime.s_to_us
+  let us_in_a_s = Int64.to_float 1_000_000L
 
   let compute_bpm time ts =
     List.map2

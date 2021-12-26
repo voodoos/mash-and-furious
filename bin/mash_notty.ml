@@ -23,7 +23,7 @@ let draw colors =
   let v = I.char A.(bg lightblack) ' ' 1 1 in
   I.(
     List.fold_left
-      (fun a (c : Ws2812b.color) ->
+      (fun a (c : Utils.color) ->
         let color = A.rgb ~r:(to_0_5 c.r) ~g:(to_0_5 c.g) ~b:(to_0_5 c.b) in
         let i = I.(string A.(fg color ++ bg lightblack) circle) in
         I.(a <|> v <|> i))

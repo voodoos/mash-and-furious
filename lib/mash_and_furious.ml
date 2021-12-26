@@ -43,7 +43,7 @@ module Game (Input : Input.S) = struct
         if i = Float.(round state.position |> to_int) then
           let bps = Float.max state.p1.bps state.p2.bps in
           let d = bps /. 40. in
-          if i = 0 || i = world_size - 1 then Ws2812b.{ r = 0; b = 0; g = 60 }
+          if i = 0 || i = world_size - 1 then Utils.{ r = 0; b = 0; g = 60 }
           else { r = 60; b = Float.round (30. *. d) |> Float.to_int; g = 0 }
         else { r = 0; b = 0; g = 0 })
 

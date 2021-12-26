@@ -1,7 +1,13 @@
 (executable
  (name mash_notty)
  (modules mash_notty)
- (libraries mash_attacks ma_notty notty.unix))
+ (libraries
+  mash_attacks
+  ma_notty
+  notty.unix
+  rpi.base-rpi3
+  rpi.hardware-unix
+  rpi))
 
 (executable
  (name mash_garland)
