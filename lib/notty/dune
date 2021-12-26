@@ -1,0 +1,3 @@
+(library
+ (name ma_notty)
+ (libraries utils notty notty.unix))

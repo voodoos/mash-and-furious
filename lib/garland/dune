@@ -1,0 +1,3 @@
+(library
+ (name ma_garland)
+ (libraries utils rpi.hardware-unix rpi.base-rpi3 rpi rpi.ws2812b))

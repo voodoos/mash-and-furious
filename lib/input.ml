@@ -1,7 +1,13 @@
+module Two_states = Utils.Two_states
+
 module type S = sig
   type t
 
-  val read : t -> Two_states.update
+  type config
+
+  val make : config -> t
+
+  val read : t list -> Two_states.update list
 
   val pp : Format.formatter -> t -> unit
 end
