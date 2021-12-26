@@ -1,3 +1,9 @@
 (executable
- (name mash)
- (libraries mash_attacks notty.unix rpi.base-rpi3 rpi rpi.ws2812b))
+ (name mash_notty)
+ (modules mash_notty)
+ (libraries mash_attacks ma_notty notty.unix))
+
+(executable
+ (name mash_garland)
+ (modules mash_garland)
+ (libraries mash_attacks ma_garland rpi.base-rpi3 rpi rpi.ws2812b))
